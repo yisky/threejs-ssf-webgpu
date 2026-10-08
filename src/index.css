@@ -1,0 +1,170 @@
+html,
+body,
+#root {
+	margin: 0;
+	height: 100%;
+	background: #1c211c;
+	color: #e7ece4;
+	font: 13px/1.45 "Segoe UI", sans-serif;
+}
+
+button,
+input {
+	font: inherit;
+	color: inherit;
+}
+
+.app {
+	display: flex;
+	height: 100%;
+}
+
+.view {
+	position: relative;
+	flex: 1;
+	min-width: 0;
+}
+
+.view canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.status {
+	position: absolute;
+	left: 16px;
+	bottom: 16px;
+	padding: 8px 12px;
+	background: rgb(20 24 20 / 72%);
+}
+
+.panel {
+	width: 300px;
+	flex: none;
+	overflow: auto;
+	padding: 16px 16px 24px;
+	background: #242824;
+	box-sizing: border-box;
+}
+
+.panel-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.collapse,
+.panel-toggle {
+	border: 0;
+	border-radius: 4px;
+	background: #343b34;
+	cursor: pointer;
+}
+
+.collapse {
+	flex: none;
+	padding: 4px 8px;
+}
+
+.panel-toggle {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 1;
+	padding: 8px 12px;
+	background: rgb(36 40 36 / 92%);
+}
+
+.collapse:hover,
+.panel-toggle:hover {
+	background: #3e473e;
+}
+
+.panel h1 {
+	margin: 0 0 6px;
+	font-size: 18px;
+	font-weight: 650;
+}
+
+.panel h2 {
+	margin: 16px 0 8px;
+	font-size: 12px;
+	font-weight: 650;
+	letter-spacing: 0.04em;
+}
+
+.panel p {
+	margin: 0;
+	color: #b7c0b4;
+}
+
+.toggle {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-top: 14px;
+}
+
+.presets {
+	display: flex;
+	gap: 6px;
+	margin-top: 12px;
+}
+
+.presets button {
+	flex: 1;
+	padding: 6px 4px;
+	border: 0;
+	border-radius: 4px;
+	background: #343b34;
+	cursor: pointer;
+}
+
+.presets button:hover {
+	background: #3e473e;
+}
+
+.field {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 4px 8px;
+	align-items: center;
+	margin: 8px 0;
+}
+
+.field span {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.field b {
+	font-weight: 550;
+	color: #d5e0d2;
+}
+
+.field input[type="range"] {
+	grid-column: 1 / -1;
+	width: 100%;
+	margin: 0;
+}
+
+.field input[type="color"] {
+	width: 36px;
+	height: 22px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+.credit {
+	margin-top: 18px;
+	font-size: 11px;
+	line-height: 1.5;
+}
+
+.credit a {
+	color: #d5e0d2;
+}
